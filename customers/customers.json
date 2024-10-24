@@ -1,47 +1,62 @@
 [
     {
-        "name": "Jewel Schaefer",
+    "name": "Jewel Schaefer",
 	"id": 1,
     "age": 23
     },
     {
-        "name": "Raleigh Larson",
+    "name": "Raleigh Larson",
 	"id": 2,
     "age": 25
     },
     {
-        "name": "Eloise Senger",
+    "name": "Eloise Senger",
 	"id": 3,
     "age": 34
     },
     {
-        "name": "Moshe Zieme",
+    "name": "Moshe Zieme",
 	"id": 4,
     "age": 20
     },
     {
-        "name": "Filiberto Lubowitz",
+    "name": "Filiberto Lubowitz",
 	"id": 5,
     "age": 34
     },
     {
-        "name": "Ms.Kadin Kling",
+    "name": "Ms.Kadin Kling",
 	"id": 6,
     "age": 18
     },
     {
-        "name": "Jennyfer Bergstrom",
+    "name": "Jennyfer Bergstrom",
 	"id": 7,
     "age": 40
     },
     {
-        "name": "Candelario Rutherford",
+    "name": "Candelario Rutherford",
 	"id": 8,
     "age": 24
     },
     {
-        "name": "Kenyatta Flatley",
+    "name": "Kenyatta Flatley",
 	"id": 9,
     "age": 35
+    },
+    {
+    "name": "Bob the builder",
+	"id": 10,
+    "age": 45
+    },
+    {
+    "name": "Tom the cat",
+	"id": 11,
+    "age": 15
+    },
+    {
+    "name": "Thor odin son",
+	"id": 12,
+    "age": 1500
     }
 ]
