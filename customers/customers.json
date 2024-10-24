@@ -43,20 +43,5 @@
     "name": "Kenyatta Flatley",
 	"id": 9,
     "age": 35
-    },
-    {
-    "name": "Bob the builder",
-	"id": 10,
-    "age": 45
-    },
-    {
-    "name": "Tom the cat",
-	"id": 11,
-    "age": 15
-    },
-    {
-    "name": "Thor odin son",
-	"id": 12,
-    "age": 1500
     }
 ]
