@@ -17,7 +17,7 @@ spec:
         sidecar.istio.io/inject: "true"
     spec:
       containers:
-        - image: 6255/customer-info:customers-fa30bb8932debb9ca16648e8afee003b026ee47c
+        - image: 6255/customer-info:customers-b0b3a01af12ec6c2a4b5e3559b5cc479d0e2f401
           imagePullPolicy: Always
           name: svc
           ports:
