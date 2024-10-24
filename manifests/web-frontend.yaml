@@ -6,7 +6,7 @@ metadata:
     app: web-frontend
 spec:
   revisionHistoryLimit: 3
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: web-frontend
@@ -28,12 +28,6 @@ spec:
   strategy:
     canary:
       steps:
-      - setWeight: 10
-      - pause:
-          duration: 2m
-      - setWeight: 20
-      - pause:
-          duration: 2m
       - setWeight: 50
       - pause:
-          duration: 2m
+          duration: 1m
