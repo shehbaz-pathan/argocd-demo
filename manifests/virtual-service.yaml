@@ -1,0 +1,18 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: customers-vs
+spec:
+  hosts:
+    - customers
+  http:
+    - name: default
+      route:
+         - destination:
+             host: customers
+             subset: stable
+           weight: 100
+         - destination:
+             host: customers
+             subset: canary
+           weight: 0 

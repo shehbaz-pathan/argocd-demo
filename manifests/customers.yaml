@@ -14,6 +14,7 @@ spec:
     metadata:
       labels:
         app: customers
+        sidecar.istio.io/inject: "true"
     spec:
       containers:
         - image: 6255/customer-info:customers-fa30bb8932debb9ca16648e8afee003b026ee47c
@@ -23,13 +24,23 @@ spec:
             - containerPort: 3000
   strategy:
     canary:
+      trafficRouting:
+        istio:
+          virtualService:
+            name: customers-vs
+            routes:
+              - default
+          destinationRule:
+            name: customers-dr
+            canarySubsetName: canary
+            stableSubsetName: stable
       steps:
-        - setWeight: 20
+        - setWeight: 10
         - pause:
             duration: 1m
-        - setWeight: 40
+        - setWeight: 30
         - pause:
             duration: 1m
-        - setWeight: 60
+        - setWeight: 50
         - pause:
             duration: 1m

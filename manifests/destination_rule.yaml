@@ -1,0 +1,13 @@
+apiVersion: networking.istio.io/v1beta1
+kind: DestinationRule
+metadata:
+  name: customers-dr
+spec:
+  host: customers
+  subsets:
+      - name: stable
+        labels:
+           app: customers
+      - name: canary
+        labels:
+          app: customers

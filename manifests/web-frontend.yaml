@@ -14,6 +14,7 @@ spec:
     metadata:
       labels:
         app: web-frontend
+        sidecar.istio.io/inject: "true"
     spec:
       containers:
         - image: 6255/customer-info:web-frontend-783157e89108fb6205b7a77920a7b44573a3e8aa
