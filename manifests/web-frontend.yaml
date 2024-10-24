@@ -6,7 +6,7 @@ metadata:
     app: web-frontend
 spec:
   revisionHistoryLimit: 3
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: web-frontend
