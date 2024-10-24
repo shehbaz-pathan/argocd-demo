@@ -1,10 +1,11 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
 metadata:
   name: web-frontend
   labels:
     app: web-frontend
 spec:
+  revisionHistoryLimit: 3
   replicas: 1
   selector:
     matchLabels:
@@ -15,7 +16,7 @@ spec:
         app: web-frontend
     spec:
       containers:
-        - image: gcr.io/tetratelabs/web-frontend:1.0.0 
+        - image: 6255/customer-info:web-frontend-783157e89108fb6205b7a77920a7b44573a3e8aa
           imagePullPolicy: Always
           name: web
           ports:
@@ -23,3 +24,15 @@ spec:
           env:
             - name: CUSTOMER_SERVICE_URL
               value: 'http://customers'
+  strategy:
+    canary:
+      steps:
+      - setWeight: 10
+      - pause:
+          duration: 2m
+      - setWeight: 20
+      - pause:
+          duration: 2m
+      - setWeight: 50
+      - pause:
+          duration: 2m
