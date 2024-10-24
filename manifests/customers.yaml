@@ -13,7 +13,7 @@ spec:
   template:
     metadata:
       labels:
-        version: 9
+        version: "9"
         app: customers
         sidecar.istio.io/inject: "true"
     spec:
