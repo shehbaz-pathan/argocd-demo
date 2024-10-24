@@ -5,6 +5,7 @@ metadata:
   labels:
     app: web-frontend
 spec:
+  type: LoadBalancer
   selector:
     app: web-frontend
   ports:
