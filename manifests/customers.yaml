@@ -13,12 +13,12 @@ spec:
   template:
     metadata:
       labels:
-        version: "v13"
+        version: "v14"
         app: customers
         sidecar.istio.io/inject: "true"
     spec:
       containers:
-        - image: 6255/customer-info:customers-8b6dfe9a5c59e75ca655b1c2efd5fbe09a2dd369
+        - image: 6255/customer-info:customers-4694b25957a552f14ecf16e5c5d7648cb925ebde
           imagePullPolicy: Always
           name: svc
           ports:
